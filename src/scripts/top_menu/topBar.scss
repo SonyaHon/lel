@@ -1,0 +1,75 @@
+@import "../../../node_modules/nord/src/sass/nord.scss";
+
+.top-bar {
+	width: 100%;
+	height: 40px;
+	background-color: $nord3;
+	color: $nord4;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.top-bar-tabs {
+	width: calc(100% - 40px);
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.top-bar-settings {
+	width: 40px;
+	height: 40px;
+	background-color: $nord2;
+}
+
+.top-bar-settings-wrapper {
+	position: absolute;
+	display: block;
+	background-color: transparent;
+	top: 0;
+	right: -1000px;
+	transition: right 0.3s ease-out;
+}
+
+.top-bar-settings-modal-icon-trans {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	background-color: transparent;
+	width: 40px;
+	height: 40px;
+}
+
+.top-bar-settings-modal {
+	min-width: 200px;
+	max-width: 30vw;
+	background-color: $nord2;
+	color: $nord4;
+	display: flex;
+	position: absolute;
+	top: 40px;
+	right: 0;
+	padding: 10px 20px;
+}
+
+.top-bar-tab {
+	height: calc(100% - 3px);
+	border-bottom: 3px solid $nord2;
+	transition: border-bottom-color 0.2s linear;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+}
+
+.top-bar-tab-selected {
+	border-bottom-color: $nord15;
+}
+
+.top-bar-tab:hover {
+	cursor: pointer;
+	border-bottom-color: $nord14;
+}
